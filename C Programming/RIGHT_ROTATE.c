@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int n;
+    scanf("%d",&n);
+    int *ptr=(int *)malloc(n*sizeof(int));
+    int a[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&a[i]);
+    }
+   
+    for(int r=1;r<=2;r++){
+         int temp=a[n-1];
+        for(int i=n-1;i>=0;i--){
+            a[i]=a[i-1];
+        }
+        a[0]=temp;
+    }
+    for(int i=0;i<n;i++){
+        printf("%d ",a[i]);
+    }
+    
+}
